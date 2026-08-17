@@ -60,3 +60,33 @@
     width: 100%;
   }
 }
+/* ===== スマホ：ヘッダーCTAをコンパクトに ===== */
+@media (max-width: 640px) {
+
+  .site-header .header-inner {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+
+  .site-header .brand-logo {
+    max-width: 170px;
+    height: auto;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-actions .btn-small {
+    padding: 9px 13px;
+    font-size: 13px;
+    line-height: 1.2;
+    min-height: auto;
+  }
+
+  .header-actions a[data-analytics-location="header-download"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
