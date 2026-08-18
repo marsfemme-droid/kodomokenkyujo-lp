@@ -47,6 +47,47 @@
   text-align: center;
 }
 
+/* ファーストビュー直下の価値訴求 */
+.value-proposition {
+  padding: 54px 0 58px;
+  background: #fff;
+  text-align: center;
+  border-bottom: 1px solid #f3ddc6;
+}
+
+.value-proposition h2 {
+  margin: 0 0 18px;
+  color: #f05a16;
+  font-size: clamp(28px, 3.8vw, 44px);
+  line-height: 1.4;
+}
+
+.value-proposition p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.95;
+}
+
+.sp-only { display: none; }
+
+@media (max-width: 640px) {
+  .value-proposition {
+    padding: 42px 0 46px;
+  }
+
+  .value-proposition h2 {
+    font-size: 27px;
+  }
+
+  .value-proposition p {
+    font-size: 16px;
+    line-height: 1.85;
+    text-align: left;
+  }
+
+  .sp-only { display: inline; }
+}
+
 /* スマホ：3つを縦並び */
 @media (max-width: 640px) {
   .hero-actions,
