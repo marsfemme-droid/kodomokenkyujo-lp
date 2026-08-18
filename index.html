@@ -101,11 +101,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div></div></section></main><footer><div class="container"><strong>一般社団法人 日本マタニティフード協会</strong><small>© Japan Maternity Food Association</small></div></footer><script>
   document.querySelectorAll('[data-analytics-location]').forEach(function (button) {
     button.addEventListener('click', function () {
-      var eventData = {
-        event: 'application_click',
-        button_name: 'application',
-        button_location: button.dataset.analyticsLocation,
-        link_url: button.href
+      var isDownload = button.dataset.analyticsLocation.includes('download');
+
+var eventData = {
+  event: isDownload ? 'document_download_click' : 'application_click',
+  button_name: isDownload ? 'document_download' : 'application',
+  button_location: button.dataset.analyticsLocation,
+  link_url: button.href
+};
       };
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(eventData);
